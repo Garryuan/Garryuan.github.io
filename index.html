@@ -7,115 +7,118 @@
     /* 添加 CSS 样式 */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f8f8f8;
+      margin: 0;
     }
     
-    header {
+    #header {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
     
-    h1 {
-      margin-top: 0;
+    #header h1 {
+      margin: 0;
       font-size: 36px;
-      font-weight: bold;
     }
     
-    h2 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-    
-    p {
+    #header p {
+      margin-top: 5px;
       font-size: 18px;
-      line-height: 1.5;
+      font-style: italic;
     }
     
-    .container {
+    #main {
       max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
+      margin: 20px auto;
+      padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
     
-    .skill {
-      display: inline-block;
-      background-color: #eee;
-      padding: 8px 16px;
-      margin-right: 16px;
-      margin-bottom: 16px;
+    #main h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    
+    #main p {
+      line-height: 1.5;
+      font-size: 18px;
+      color: #666;
+    }
+    
+    #main ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    #main li {
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #666;
+    }
+    
+    /* 添加可视化元素 */
+    .skill-bar {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      height: 25px;
+      line-height: 25px;
+    }
+    
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
       font-size: 16px;
       font-weight: bold;
-      border-radius: 4px;
+      transition: width 1s ease;
     }
     
-    .skill:last-of-type {
-      margin-right: 0;
+    .skill-bar-html span {
+      width: 90%;
     }
     
-    .chart {
-      display: inline-block;
-      width: 200px;
-      height: 200px;
-      position: relative;
-      margin: 20px;
-      text-align: center;
+    .skill-bar-css span {
+      width: 80%;
     }
     
-    .chart span {
-      display: block;
-      font-size: 24px;
-      font-weight: bold;
-      line-height: 200px;
-      color: #333;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    .skill-bar-js span {
+      width: 70%;
     }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>姓名</h1>
+    <p>个人简介</p>
+  </div>
+  <div id="main">
+    <h2>个人信息</h2>
+    <p>这里写您的个人信息。</p>
     
-    .chart .slice {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      clip: rect(0, 100px, 200px, 0);
-    }
+    <h2>教育经历</h2>
+    <ul>
+      <li>教育经历一</li>
+      <li>教育经历二</li>
+      <li>教育经历三</li>
+    </ul>
     
-    .chart .slice .bar {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      clip: rect(0, 100px, 200px, 0);
-      border-radius: 50%;
-      background-color: #00bfff;
-      transform-origin: 50% 50%;
-    }
-    
-    .chart .slice .bar.percent-0 {
-      transform: rotate(0deg);
-    }
-    
-    .chart .slice .bar.percent-25 {
-      transform: rotate(90deg);
-    }
-    
-    .chart .slice .bar.percent-50 {
-      transform: rotate(180deg);
-    }
-    
-    .chart .slice .bar.percent-75 {
-      transform: rotate(270deg);
-    }
-    
-    .chart .slice .bar.percent-100 {
-      transform: rotate(360deg);
-    }
-    
-    .chart .slice .fill {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 
+    <h2>工作经历</h2>
+    <ul>
+      <li>工作经历一</li>
+      <li>工作经历二</li>
+      <li>工作经历三</li>
+    </ul>
+    </div>
+</body>
+</html>
+   

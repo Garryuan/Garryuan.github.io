@@ -6,40 +6,65 @@
   <style>
     /* 添加 CSS 样式 */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
     
-    #header {
+    header {
       background-color: #333;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
     
-    #main {
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
-    #main h2 {
-      margin-top: 0;
+    .skill {
+      display: inline-block;
+      background-color: #eee;
+      padding: 8px 16px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
     }
     
-    #main p {
-      line-height: 1.5;
+    .skill:last-of-type {
+      margin-right: 0;
     }
   </style>
 </head>
 <body>
-  <div id="header">
+  <header>
     <h1>姓名</h1>
     <p>个人简介</p>
-  </div>
-  <div id="main">
+  </header>
+  <div class="container">
     <h2>个人信息</h2>
     <p>这里写您的个人信息。</p>
     
@@ -50,11 +75,9 @@
     <p>这里写您的工作经历。</p>
     
     <h2>技能</h2>
-    <ul>
-      <li>技能一</li>
-      <li>技能二</li>
-      <li>技能三</li>
-    </ul>
+    <div class="skill">技能一</div>
+    <div class="skill">技能二</div>
+    <div class="skill">技能三</div>
   </div>
 </body>
 </html>

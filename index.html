@@ -1,73 +1,121 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">My Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
-        <h1>About Me</h1>
-        <p>Hi, my name is Jane Doe and I'm a web developer with a passion for creating beautiful and functional websites. I love learning new technologies and experimenting with different design styles.</p>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>React</li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h1>My Projects</h1>
-        <ul>
-          <li>
-            <h2>Project 1</h2>
-            <p>This is a project I worked on for a client. It's a responsive website for a local business, with an interactive menu and a gallery of images. I used HTML, CSS, and JavaScript for this project.</p>
-            <img src="project1.png" alt="Screenshot of Project 1">
-          </li>
-          <li>
-            <h2>Project 2</h2>
-            <p>This is a personal project I worked on to practice my data visualization skills. I used Python and the matplotlib library to create some cool charts and graphs.</p>
-            <div id="chart"></div>
-          </li>
-        </ul>
-      </section>
-      <section id="contact">
-        <h1>Contact Me</h1>
-        <p>If you have any questions or would like to work with me, please send me an email at jane.doe@example.com or fill out the form below:</p>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea><br>
-          <input type="submit" value="Submit">
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2023 Jane Doe</p>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-      var data = [
-        {
-          x: [1, 2, 3, 4, 5],
-          y: [1, 2, 4, 8, 16],
-          type: 'scatter',
-          mode: 'lines+markers',
-          marker: {color: '#FFB6C1'},
-          line: {color: '#FF69B4'}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人简介</title>
+  <style>
+    /* 添加 CSS 样式 */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill {
+      display: inline-block;
+      background-color: #eee;
+      padding: 8px 16px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    
+    .skill:last-of-type {
+      margin-right: 0;
+    }
+    
+    .chart {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .chart span {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 200px;
+      color: #333;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .chart .slice {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip: rect(0, 100px, 200px, 0);
+    }
+    
+    .chart .slice .bar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip: rect(0, 100px, 200px, 0);
+      border-radius: 50%;
+      background-color: #00bfff;
+      transform-origin: 50% 50%;
+    }
+    
+    .chart .slice .bar.percent-0 {
+      transform: rotate(0deg);
+    }
+    
+    .chart .slice .bar.percent-25 {
+      transform: rotate(90deg);
+    }
+    
+    .chart .slice .bar.percent-50 {
+      transform: rotate(180deg);
+    }
+    
+    .chart .slice .bar.percent-75 {
+      transform: rotate(270deg);
+    }
+    
+    .chart .slice .bar.percent-100 {
+      transform: rotate(360deg);
+    }
+    
+    .chart .slice .fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 
